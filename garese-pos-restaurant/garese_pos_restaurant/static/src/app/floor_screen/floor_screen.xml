@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <!-- Card of a table: list view and "active tables" panel -->
+    <t t-name="garese_pos_restaurant.TableCard">
+        <button type="button" class="gp-tc" t-attf-class="gp-st-{{card.info.status}} {{card.isSource ? 'gp-tc-source' : ''}}"
+                t-on-click="(ev) => this.onSelectTable(card.table, ev)">
+            <span class="gp-tc-head">
+                <span class="gp-tc-name" t-esc="card.table.name"/>
+                <span class="gp-tc-seats"><i class="fa fa-user"/><t t-esc="card.seats"/></span>
+            </span>
+            <span class="gp-tc-status">
+                <i class="fa" t-att-class="card.icon"/>
+                <t t-esc="card.info.statusLabel"/>
+            </span>
+            <span t-if="card.info.waiterName" class="gp-tc-waiter">
+                <i class="fa fa-id-badge"/><t t-esc="card.info.waiterName"/>
+            </span>
+            <span t-if="card.info.isBusy" class="gp-tc-foot">
+                <span class="gp-tc-time"><i class="fa fa-clock-o"/><t t-esc="card.info.elapsed"/></span>
+                <span class="gp-tc-amount" t-esc="card.amount"/>
+            </span>
+            <span t-elif="card.info.reservation and !card.info.reservation.expired" class="gp-tc-foot">
+                <span class="gp-tc-time"><i class="fa fa-calendar-o"/><t t-esc="card.info.reservation.label"/></span>
+                <span class="gp-tc-resa" t-esc="card.info.reservation.name"/>
+            </span>
+        </button>
+    </t>
+
+    <t t-name="garese_pos_restaurant.FloorScreen" t-inherit="pos_restaurant.FloorScreen" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('floor-screen')]" position="attributes">
+            <attribute name="t-att-class">gpClass</attribute>
+        </xpath>
+
+        <!-- Left panel: rooms and filters. Centre: title and view tools. -->
+        <xpath expr="//div[hasclass('floor-selector')]" position="before">
+            <aside t-if="gpActive" class="gp-fl-side">
+                <h2 class="gp-fl-side-title">Floor plan</h2>
+                <nav class="gp-fl-floors">
+                    <t t-foreach="pos.floors" t-as="floor" t-key="floor.id">
+                        <button type="button" class="gp-fl-floor"
+                                t-att-class="{ active: !gp.allFloors and floor.id === state.selectedFloorId }"
+                                t-on-click="() => this.selectFloor(floor)">
+                            <i class="fa fa-map-o"/>
+                            <span class="gp-fl-floor-name" t-esc="floor.name"/>
+                            <span t-if="floor.changes_count > 0" class="gp-fl-floor-alert" t-esc="floor.changes_count"
+                                  title="Items waiting to be sent to the kitchen"/>
+                            <span class="gp-fl-floor-count" t-esc="floor.tables.length"/>
+                        </button>
+                    </t>
+                    <button type="button" class="gp-fl-floor gp-fl-all" t-att-class="{ active: gp.allFloors }"
+                            t-on-click="() => this.gpSelectAllFloors()">
+                        <i class="fa fa-th-large"/>
+                        <span class="gp-fl-floor-name">All tables</span>
+                        <span class="gp-fl-floor-count" t-esc="gpTotalTables"/>
+                    </button>
+                </nav>
+                <h3 class="gp-fl-side-subtitle">Display filters</h3>
+                <div class="gp-fl-filters">
+                    <t t-foreach="gpFilters" t-as="filter" t-key="filter.id">
+                        <button type="button" class="gp-fl-filter" t-attf-class="gp-st-{{filter.id}}"
+                                t-att-class="{ active: gp.filter === filter.id }"
+                                t-on-click="() => this.gpSetFilter(filter.id)">
+                            <span class="gp-dot"/>
+                            <span class="gp-fl-filter-label" t-esc="filter.label"/>
+                            <span class="gp-fl-filter-count" t-esc="filter.count"/>
+                        </button>
+                    </t>
+                </div>
+                <t t-if="pos.gpUseWaiter">
+                    <h3 class="gp-fl-side-subtitle">Waiter</h3>
+                    <select class="gp-fl-waiter-filter form-select" t-on-change="gpSetWaiterFilter" aria-label="Waiter">
+                        <option value="0" t-att-selected="!gp.waiterId">All waiters</option>
+                        <t t-foreach="pos.gpWaiters" t-as="waiter" t-key="waiter.id">
+                            <option t-att-value="waiter.id" t-att-selected="gp.waiterId === waiter.id" t-esc="waiter.name"/>
+                        </t>
+                    </select>
+                </t>
+            </aside>
+
+            <div t-if="gpActive" class="gp-fl-head">
+                <button t-if="gp.full" type="button" class="gp-fl-tool" t-on-click="() => this.gpToggleFull()"
+                        aria-label="Show the side panels" title="Show the side panels">
+                    <i class="fa fa-bars"/>
+                </button>
+                <h2 class="gp-fl-title">
+                    <t t-esc="gpTitle"/>
+                    <span class="gp-fl-title-count" t-esc="gpTitleCount"/>
+                </h2>
+                <div class="gp-fl-views" role="group">
+                    <button type="button" t-att-class="{ active: !gpShowList }" t-on-click="() => this.gpSetView('plan')">
+                        <i class="fa fa-map-o"/> Plan
+                    </button>
+                    <button type="button" t-att-class="{ active: gpShowList }" t-on-click="() => this.gpSetView('list')">
+                        <i class="fa fa-list-ul"/> List
+                    </button>
+                </div>
+                <div class="gp-fl-zoom" t-att-class="{ 'gp-disabled': gpShowList }">
+                    <button type="button" class="gp-fl-tool" t-on-click="() => this.gpZoom(-0.1)"
+                            aria-label="Zoom out" title="Zoom out"><i class="fa fa-minus"/></button>
+                    <button type="button" class="gp-fl-zoom-value" t-on-click="() => this.gpZoom(0)"
+                            title="Fit the plan to the screen" t-esc="gpZoomLabel"/>
+                    <button type="button" class="gp-fl-tool" t-on-click="() => this.gpZoom(0.1)"
+                            aria-label="Zoom in" title="Zoom in"><i class="fa fa-plus"/></button>
+                </div>
+                <button type="button" class="gp-fl-tool" t-att-class="{ active: gp.full }" t-on-click="() => this.gpToggleFull()"
+                        aria-label="Full width plan" title="Full width plan">
+                    <i class="fa" t-att-class="gp.full ? 'fa-compress' : 'fa-expand'"/>
+                </button>
+            </div>
+
+            <div t-if="gpActive and gpHint" class="gp-fl-hint">
+                <i class="fa fa-hand-pointer-o"/>
+                <span t-esc="gpHint"/>
+                <button type="button" t-on-click="() => this.gpCancelMode()">Cancel</button>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[hasclass('floor-map')]" position="attributes">
+            <attribute name="t-att-class">{ 'gp-fl-map-hidden': gpShowList }</attribute>
+        </xpath>
+        <!-- Plan: fitted to the screen, zoom, background picture of the room -->
+        <xpath expr="//div[hasclass('floor-map')]//div[@t-else=''][@t-ref='map']" position="attributes">
+            <attribute name="t-att-style">gpMapStyle</attribute>
+            <attribute name="t-att-class">{ 'gp-fl-plan': gpActive }</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('floor-map')]//div[@t-else=''][@t-ref='map']/t[@t-foreach='activeTables']" position="before">
+            <img t-if="gpBackgroundUrl" class="gp-fl-bg" t-att-src="gpBackgroundUrl" t-key="gpBackgroundUrl"
+                 alt="" draggable="false" t-on-load="gpOnBackgroundLoad"/>
+        </xpath>
+
+        <xpath expr="//div[hasclass('floor-map')]" position="after">
+            <!-- List view -->
+            <div t-if="gpShowList" class="gp-fl-list">
+                <t t-foreach="gpListGroups" t-as="group" t-key="group.floor.id">
+                    <h3 t-if="gp.allFloors" class="gp-fl-list-title">
+                        <t t-esc="group.floor.name"/>
+                        <span t-esc="group.cards.length"/>
+                    </h3>
+                    <div class="gp-fl-cards">
+                        <t t-foreach="group.cards" t-as="card" t-key="card.table.id">
+                            <t t-call="garese_pos_restaurant.TableCard"/>
+                        </t>
+                    </div>
+                </t>
+                <div t-if="!gpListGroups.length" class="gp-fl-empty">
+                    <i class="fa fa-search"/>
+                    <span>No table matches the filter.</span>
+                </div>
+            </div>
+
+            <!-- Actions: tap one, then the table -->
+            <div t-if="gpActive" class="gp-fl-actions">
+                <t t-foreach="gpActions" t-as="action" t-key="action.mode">
+                    <button type="button" class="gp-fl-action" t-attf-class="gp-fl-action-{{action.mode}}"
+                            t-att-class="{ active: gp.mode === action.mode }"
+                            t-on-click="() => this.gpSetMode(action.mode)">
+                        <i class="fa" t-att-class="action.icon"/>
+                        <span t-esc="action.label"/>
+                    </button>
+                </t>
+            </div>
+
+            <!-- Right panel: tables with an open order, legend -->
+            <aside t-if="gpActive" class="gp-fl-right">
+                <t t-set="activeCards" t-value="gpActiveCards"/>
+                <div class="gp-fl-right-head">
+                    <h2 class="gp-fl-side-title">Active tables <span>(<t t-esc="activeCards.length"/>)</span></h2>
+                    <button t-if="activeCards.length > gpActivePreview" type="button" class="gp-fl-link"
+                            t-on-click="() => this.gpToggleAllActive()">
+                        <t t-if="gp.showAllActive">Show fewer</t>
+                        <t t-else="">See all</t>
+                    </button>
+                </div>
+                <div class="gp-fl-active">
+                    <t t-foreach="gp.showAllActive ? activeCards : activeCards.slice(0, gpActivePreview)" t-as="card" t-key="card.table.id">
+                        <button type="button" class="gp-ac" t-attf-class="gp-st-{{card.info.status}}"
+                                t-on-click="(ev) => this.gpOpenActive(card.table, ev)">
+                            <span class="gp-ac-badge" t-esc="card.table.name"/>
+                            <span class="gp-ac-body">
+                                <span class="gp-ac-line">
+                                    <span class="gp-ac-floor">
+                                        <t t-if="card.info.waiterName"><b t-esc="card.info.waiterName"/> · </t>
+                                        <t t-esc="card.table.floor.name"/>
+                                    </span>
+                                    <span class="gp-ac-amount" t-esc="card.amount"/>
+                                </span>
+                                <span class="gp-ac-line gp-ac-meta">
+                                    <span><i class="fa fa-user"/><t t-esc="card.seats"/></span>
+                                    <span><i class="fa fa-clock-o"/><t t-esc="card.info.elapsed"/></span>
+                                    <span class="gp-ac-pill">
+                                        <t t-if="card.info.status === 'occupied'">To send</t>
+                                        <t t-else="">In progress</t>
+                                    </span>
+                                </span>
+                            </span>
+                        </button>
+                    </t>
+                    <div t-if="!activeCards.length" class="gp-fl-empty gp-fl-empty-small">
+                        <i class="fa fa-coffee"/>
+                        <span>No open order for now.</span>
+                    </div>
+                </div>
+                <div class="gp-fl-legend">
+                    <h3 class="gp-fl-side-subtitle">Legend</h3>
+                    <t t-foreach="gpLegend" t-as="item" t-key="item.id">
+                        <div class="gp-fl-legend-item" t-attf-class="gp-st-{{item.id}}">
+                            <span class="gp-dot"/>
+                            <span t-esc="item.label"/>
+                        </div>
+                    </t>
+                </div>
+            </aside>
+        </xpath>
+    </t>
+
+</templates>
