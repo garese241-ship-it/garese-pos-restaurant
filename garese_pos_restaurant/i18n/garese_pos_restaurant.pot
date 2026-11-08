@@ -1,0 +1,974 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* garese_pos_restaurant
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-04 08:59+0000\n"
+"PO-Revision-Date: 2026-10-04 08:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "%s - %s - %s guests. Seat the guests now?"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid ""
+"%s - %s. Seat the guests of table %s here anyway? The reservation is kept."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/store/pos_store_patch.js:0
+#, python-format
+msgid "%s h %s"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/store/pos_store_patch.js:0
+#, python-format
+msgid "%s min"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "(%s tables)"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,help:garese_pos_restaurant.field_pos_config__gp_reservation_before
+#: model:ir.model.fields,help:garese_pos_restaurant.field_res_config_settings__pos_gp_reservation_before
+msgid ""
+"A reserved table is shown as reserved on the floor plan this many minutes "
+"before the time of the reservation. 0: from the beginning of the day."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Active tables"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "All states"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "All tables"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "All waiters"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.xml:0
+#, python-format
+msgid "Arrival time"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_restaurant_table__gp_waiter_id
+msgid "Assigned Waiter"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Bill: tap the table."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/table_patch.js:0
+#, python-format
+msgid "Booked"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Cancel the order"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.xml:0
+#, python-format
+msgid "Cancel the reservation"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Cancel the reservation of table %s (%s - %s)?"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model,name:garese_pos_restaurant.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.xml:0
+#, python-format
+msgid "Customer name, phone..."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.xml:0
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.js:0
+#, python-format
+msgid "Discard"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Display filters"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-python
+#: code:addons/garese_pos_restaurant/models/restaurant.py:0
+#, python-format
+msgid "Enter the name of the reservation."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.xml:0
+#, python-format
+msgid "Fewer guests"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Fit the plan to the screen"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model_terms:ir.ui.view,arch_db:garese_pos_restaurant.gp_view_restaurant_floor_form
+msgid "Floor Plan Picture"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Floor plan"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Free a table: tap the table."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/store/pos_store_patch.js:0
+#, python-format
+msgid "Free table"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Free table %s"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Free the table"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Full width plan"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_restaurant_floor__gp_has_background
+msgid "Has a Floor Plan Picture"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model_terms:ir.ui.view,arch_db:garese_pos_restaurant.gp_res_config_settings_view_form_restaurant
+msgid "Hold (min before)"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_pos_config__gp_reservation_before
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_res_config_settings__pos_gp_reservation_before
+msgid "Hold Reserved Tables (min before)"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "In progress"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "In service"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Items waiting to be sent to the kitchen"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Keep the order"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Keep the reservation"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Leave out of service"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Legend"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "List"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Manager required"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Merge"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Merge %s: tap the table that receives its order."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Merge tables"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Merge tables: tap the table to empty."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.xml:0
+#, python-format
+msgid "More guests"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.js:0
+#, python-format
+msgid "More guests than seats at this table (%s)."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Move %s: tap the new table."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Move a table"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Move a table: tap the table of the guests."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Move here"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.xml:0
+#, python-format
+msgid "Name of the reservation"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "New order"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "New order: tap the table."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "No bill"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "No connection"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "No open order for now."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "No table matches the filter."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Not now"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Nothing to merge with"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Nothing to move"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.xml:0
+#, python-format
+msgid "Number of guests"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Occupied"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/store/pos_store_patch.js:0
+#, python-format
+msgid "Occupied table"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid ""
+"One of these orders has a payment in progress: finish or remove it first."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-python
+#: code:addons/garese_pos_restaurant/models/restaurant.py:0
+#, python-format
+msgid "Only Point of Sale users can change the state of a table."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid ""
+"Only a manager can free a table whose order still has items. Otherwise, "
+"collect the payment of the order."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_restaurant_table__gp_unavailable
+msgid "Out of Service"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/table_patch.js:0
+#, python-format
+msgid "Out of service"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Out of service: tap the table to block or to put back in service."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Payment in progress"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model_terms:ir.ui.view,arch_db:garese_pos_restaurant.gp_view_restaurant_floor_form
+msgid ""
+"Picture of the room (walls, bar, terrace...) shown behind the tables in the "
+"Point of Sale, at its real size: 1 pixel of the picture is 1 pixel of the "
+"plan. Place the tables on it with \"Edit Plan\" in the Point of Sale."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Plan"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model,name:garese_pos_restaurant.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model,name:garese_pos_restaurant.model_pos_session
+msgid "Point of Sale Session"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Put back in service"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model_terms:ir.ui.view,arch_db:garese_pos_restaurant.gp_res_config_settings_view_form_restaurant
+msgid "Release (min after)"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_pos_config__gp_reservation_after
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_res_config_settings__pos_gp_reservation_after
+msgid "Release Reserved Tables (min after)"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/table_patch.js:0
+#, python-format
+msgid "Res. %s"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model_terms:ir.ui.view,arch_db:garese_pos_restaurant.gp_view_restaurant_table_form
+msgid "Reservation"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_restaurant_table__gp_reserved_name
+msgid "Reservation Name"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Reservation of table %s"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Reservation: tap the table to reserve."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/reservation_popup.js:0
+#, python-format
+msgid "Reserve"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_restaurant_table__gp_reserved_at
+msgid "Reserved For"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,field_description:garese_pos_restaurant.field_restaurant_table__gp_reserved_guests
+msgid "Reserved Guests"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/store/pos_store_patch.js:0
+#, python-format
+msgid "Reserved table"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model,name:garese_pos_restaurant.model_restaurant_floor
+msgid "Restaurant Floor"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model,name:garese_pos_restaurant.model_restaurant_table
+msgid "Restaurant Table"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Save the reservation"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/navbar/navbar_patch.js:0
+#, python-format
+msgid "Search a table..."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Seat the guests"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "See all"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/store/pos_store_patch.js:0
+#, python-format
+msgid "Service in progress"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Show fewer"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Show the bill"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Show the side panels"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table %s already has a reservation."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid ""
+"Table %s already has an order. To group both tables, use 'Merge tables'."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table %s has an order in progress: it cannot be put out of service."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table %s has no order and no reservation to move."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table %s has no order to merge."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table %s has no order."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid ""
+"Table %s has no order. To change the table of the guests, use 'Move a "
+"table'."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table %s is out of service. Put it back in service?"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table %s is out of service: choose another table."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table %s is reserved"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model_terms:ir.ui.view,arch_db:garese_pos_restaurant.gp_res_config_settings_view_form_restaurant
+msgid "Table Reservations"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table already free"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table already occupied"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Table already reserved"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.constraint,message:garese_pos_restaurant.constraint_pos_config_gp_reservation_after_positive
+msgid "The delay after a reservation cannot be negative."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.constraint,message:garese_pos_restaurant.constraint_pos_config_gp_reservation_before_positive
+msgid "The delay before a reservation cannot be negative."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid ""
+"The order of table %s is added to the order of table %s, and table %s is "
+"freed."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid ""
+"The order of this table (%s) is cancelled without payment. This cannot be "
+"undone."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,help:garese_pos_restaurant.field_restaurant_table__gp_unavailable
+msgid ""
+"The table cannot be used for now (out of order, privatised area...). It is "
+"shown in grey on the floor plan."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "This action needs the server. Check the network and try again."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "To send"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Transfer of the order: tap the destination table."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Unavailable"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#: code:addons/garese_pos_restaurant/static/src/app/store/pos_store_patch.js:0
+#, python-format
+msgid "Unavailable table"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Vacant"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Waiter"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,help:garese_pos_restaurant.field_restaurant_table__gp_waiter_id
+msgid ""
+"Waiter in charge of this table: proposed on every new order of the table."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Waiter of table %s"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Waiter: tap the table to assign."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model_terms:ir.ui.view,arch_db:garese_pos_restaurant.gp_res_config_settings_view_form_restaurant
+msgid ""
+"When a reserved table turns blue on the floor plan, and when it is released "
+"if the guests do not come."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#: model:ir.model.fields,help:garese_pos_restaurant.field_pos_config__gp_reservation_after
+#: model:ir.model.fields,help:garese_pos_restaurant.field_res_config_settings__pos_gp_reservation_after
+msgid ""
+"When the guests have not been seated, the table is shown as free again this "
+"many minutes after the time of the reservation. 0: never."
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Which bill?"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "Who serves table %s?"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen_patch.js:0
+#, python-format
+msgid "With reservation"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Zoom in"
+msgstr ""
+
+#. module: garese_pos_restaurant
+#. odoo-javascript
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#: code:addons/garese_pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
+#, python-format
+msgid "Zoom out"
+msgstr ""
